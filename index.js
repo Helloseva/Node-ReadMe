@@ -1,13 +1,15 @@
 // packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
+const path = require("path");
 const generateMarkdown = require("./utils/generateMarkdown");
+
 
 // array of questions for user input
 const questions = [
   {
     type: "input",
-    message: "What is the project title?",
+    message: "What is your project title?",
     name: "title",
     validate: (value) => {
       if (value) {
@@ -19,7 +21,7 @@ const questions = [
   },
   {
     type: "input",
-    message: "What is a short description of your project?",
+    message: "What is the description of your project?",
     name: "description",
     validate: (value) => {
       if (value) {
@@ -31,7 +33,7 @@ const questions = [
   },
   {
     type: "input",
-    message: "How to you intall this app?",
+    message: "How do you intall this project?",
     name: "installation",
     validate: (value) => {
       if (value) {
@@ -43,7 +45,7 @@ const questions = [
   },
   {
     type: "input",
-    message: "What are instuctions and examples for use?",
+    message: "How to use this project?",
     name: "usage",
     validate: (value) => {
       if (value) {
@@ -55,8 +57,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "List any collaborators",
-    name: "credits",
+    message: "Enyter any collaborators",
+    name: "collabarators",
     validate: (value) => {
       if (value) {
         return true;
@@ -67,7 +69,7 @@ const questions = [
   },
   {
     type: "list",
-    message: "What license did you use?",
+    message: "What license need to be used?",
     name: "license",
     choices: [
       "Apache 2.0",
@@ -88,8 +90,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "How can others contribute?",
-    name: "contributions",
+    message: "How others can contribute to this project?",
+    name: "contributing",
     validate: (value) => {
       if (value) {
         return true;
@@ -100,8 +102,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "Do you have test examples for this application?",
-    name: "testing",
+    message: "How to run test examples for this project?",
+    name: "tests",
     validate: (value) => {
       if (value) {
         return true;
@@ -144,7 +146,7 @@ function writeToFile(fileName, data) {
     if (err) {
       return console.log(err);
     } else {
-      console.log("sucess");
+      console.log("uraaa");
     }
   });
 }

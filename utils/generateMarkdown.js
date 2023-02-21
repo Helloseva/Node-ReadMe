@@ -8,9 +8,9 @@ function generateMarkdown(data) {
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Credits](#credits)
-  * [Contributions](#contributions)
-  * [Testing](#testing)
+  * [Collabarators](#collabarators)
+  * [Contributing](#contributing)
+  * [Tests](#testing)
   * [Questions](#questions)
   
 
@@ -23,11 +23,11 @@ function generateMarkdown(data) {
   ## Collabarators:
   ${data.credits}
 
-  ## Contributions:
-  ${data.contributions}
+  ## Contributing:
+  ${data.contributing}
 
-  ## Testing:
-  ${data.testing}
+  ## Tests:
+  ${data.tests}
   
   ## Questions:
    - Github: [${data.github}](https://github.com/${data.github})
